@@ -132,17 +132,69 @@ hr {
 /* *********Portfolio*********** */
 
 .projects-set1{
-    float: left;
-    width: 33.33%;
+    /* float: left; */
+    /* width: 33.33%; */
     padding: 20px;
 }
 
 .projects-set2{
-    float: left;
-    width: 33.33%;
+    /* float: left; */
+    /* width: 33.33%; */
     padding: 20px;
+}
+
+.portfolio h1{
+    display: block;
+    width: 100%;
 }
 
 .portfolio{
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.portfolio a img{
+    height: 250px;
+    width: 400px;
+}
+
+.contactMe{
+    height: 100vh;
+    background: url("images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.contactMeDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactMeUl{
+    display: flex;
+    width: 80%;
+    padding: 100px;
+    justify-content: center;
+
+    align-items: center;
+}
+
+.contactMeUl li{
+    list-style: none;
+    padding: 50px;
+    
+}
+
+.contactMeUl li a{
+    text-decoration: none;
+}
+
+.contactMeUl li a i{
+    font-size: 3rem;
+    color: #013859;
 }
