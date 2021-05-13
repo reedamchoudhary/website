@@ -228,4 +228,7 @@ footer{
     .intro h1{
         font-size: 2rem;
     }
+    .box{
+        margin : 5px
+    }
 }
