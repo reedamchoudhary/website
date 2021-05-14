@@ -161,7 +161,7 @@ body{
 
 .about-me-content p{
     width: 50%;
-    padding: 20px;
+    padding: 70px;
     text-align: justify;
     margin-right: 20px;
     font-size: 25px;
@@ -176,10 +176,50 @@ body{
     background-size: cover; */
 }
 
+/* *********************************PORTFOLIO*************************** */
+.portfolio{
+    width: 100%;
+    height: 100vh;
+}
+.project-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding: 30px;
+}
 
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.row li{
+    margin: 10px;
+}
+
+.row li a img{
+    box-shadow: 10px 10px 10px gray;
+}
+
+.row li a img:hover{
+    transform: translateY(-10px);
+    box-shadow: 15px 20px 15px gray;
+    transition: all .5s;
+}
+
+
+
+
+/* 
 @media screen and (max-width : 1200px) {
     .title{
-        /* background-color: orange; */
+        /* background-color: orange; 
         background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(images/paint-brush.jpg);
         background-size: cover;
         width: 100%;
@@ -213,7 +253,7 @@ body{
 
 @media screen and (max-width : 800px) {
     .title{
-        /* background-color: orange; */
+        /* background-color: orange; 
         background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(images/paint-brush.jpg);
         background-size: cover;
         width: 100%;
@@ -243,7 +283,7 @@ body{
         font-weight: bold;
     }
     .about-me{
-        /* background-position: center 50% ; */
+        /* background-position: center 50% ; 
         background-size: cover;
         height: 100%;
     }
@@ -270,4 +310,4 @@ body{
 }
 
 
-
+ */
