@@ -336,7 +336,7 @@ footer{
     }
     .details-card{
         /* flex-wrap: wrap; */
-        width: 400px;
+        width: 800px;
         height: 400px;
     }
 }
