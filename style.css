@@ -177,7 +177,7 @@ body{
 }
 
 
-@media(max-width : 887px) {
+@media screen and (max-width : 800px) {
     .title{
         /* background-color: orange; */
         background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(images/paint-brush.jpg);
@@ -211,7 +211,7 @@ body{
 }
 
 
-@media(max-width : 634px) {
+@media screen and (max-width : 480px) {
     .title{
         /* background-color: orange; */
         background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(images/paint-brush.jpg);
