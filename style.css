@@ -155,6 +155,10 @@ body{
     text-align: center;
 }
 
+.tme{
+    color: white;
+}
+
 .about-me-content {
 
 }
@@ -212,6 +216,149 @@ body{
     box-shadow: 15px 20px 15px gray;
     transition: all .5s;
 }
+
+/* *************************************CONTACT ME******************* */
+
+.contact-me{
+    width: 100%;
+    height: 80vh;
+    background-color: #94d0cc;
+    align-items: center;
+    
+}
+
+.card{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-card{
+    
+    width: 60%;
+    height: 70%;
+    background-image: url("images/page.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+    /* background-position: 50% 50%; */
+}
+
+.details-card a{
+    margin: 20px;
+}
+
+.far,.fab{
+    font-size: 3rem;
+    /* margin: 20px; */
+    color: #013759;
+}
+
+.far:hover{
+    transform: translate(2, 3)
+}
+/* ****************************FOOTER************************ */
+
+footer{
+    height: 20vh;
+    width: 100%;
+    background-color: #013759;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* ***************************************MEDIA QUERY******************* */
+
+
+
+@media screen and (min-width:768px) and (max-width: 1024px){
+    .about-me p{
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (max-width: 767px){
+    .tme{
+        color: black;
+    }
+    .about-me-content{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .about-me img{
+        width: 100%;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        background-image: url("images/Untitled\ design\ \(1\).jpg");
+        background-size: 90%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+    .about-me p{
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .about-me{
+        background: none;
+    }
+    .about-me .heading{
+        margin-bottom: 10px;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+    .portfolio{
+        height: auto;
+    }
+    .title h1{
+        font-size: 6rem;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+    .details-card{
+        /* flex-wrap: wrap; */
+        width: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
