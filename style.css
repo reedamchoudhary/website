@@ -343,6 +343,9 @@ footer{
     .details-card i{
         font-size: 80px;
     }
+    .hamburger div{
+        height: 5px;
+    }
 }
 
 
