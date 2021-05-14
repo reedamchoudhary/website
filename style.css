@@ -1,226 +1,123 @@
-body,html {
+*{
     margin: 0;
     padding: 0;
-}
-* {
     box-sizing: border-box;
-    background-size: 100% 100%;
 }
 
-
-.intro img{
-
-    margin : auto;
-    width:800px;
-    height:auto;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index : -1;
-    /* opacity : 0.8; */
-
-}
-
-body{
+h1{
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    /* margin: auto; */
-    
-    /* background-color: white; */
-    width: auto;
-    /* background-position: center; */
-    
-    /* opacity: 0.5; */
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.hamburger{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.lines{
+    width: 50px;
+    height: 2px;
+    background-color: #94d0cc;
+    margin: 5px;
 
 }
 
-.intro{
-    height: fit-content;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
-    url("images/paint-brush.jpg");
-    background-repeat: no-repeat;
-    background-position: 0 35%; 
-    background-size: cover;
-}
-
-.intro h1{
-    font-family: 'Sacramento', cursive;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    /* margin-top: auto; */
-    padding-top: 17rem;
-    padding-bottom: 3rem;
-    font-weight: lighter;
-    font-size: 12rem;
-    /* max-width: 500px; */
-    /* padding-left: 500px; */
-    
-}
-
-.intro h2{
-    font-size: 3rem;
-}
-
-hr {
-    border: 0;
-    margin: 1.35em auto;
-    max-width: 100%;
-    background-position: 50%;
-    box-sizing: border-box;
-    border-width: 0 0 1px;
-    color: skyblue;
-    
-    
-    /* height: 8px; */
-    border-width: 0 0 8px;
-    border-style: dotted;
-    border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 1" width="8" height="4"><circle fill="#{$color}" cx="1" cy="0.5" r="0.5"/></svg>') 0 0 100% repeat;
-    width: 216px;
-  }
-
-  /* ************About Me*************** */
-
-.aboutMe p{
-    max-width: 50%;
-    font-size: 2em;
-    margin-block-start: 0;
-    text-align: justify;
-    padding-left: 50px;
-    /* display: inline; */
-    }
-
-.aboutMe{
-    margin: 130px 0;
+.navigation-bar{
+    position: absolute;
+    background-color: #94d0cc;
+    width: 100%;
     height: 100vh;
-    background-image: url("images/background-hero.png");
-    /* background-size: cover; */
-    /* background-image: white url("images/Untitled\ design1.jpg");
-    background-size: 50% 50%;
-    background-repeat: no-repeat; */
-    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.navigation-bar li{
+    padding: 20px;
+    width: 100vw;
+    list-style: none;
+    text-align: center;
+    text-decoration: none;
+}
+.navigation-bar li:hover{
+    background-color: gray;
 }
 
 .title{
-    font-size: 4rem;
-    letter-spacing: 1px;
-    font-family: 'Open Sans', sans-serif;
-    margin-block-start: 0em;
-}
-
-
-
-.box{
-    float: left;
-    width: 50%;
-    
-    
-}
-
-
-.hero img{
-    padding-top: 50px;
-    padding-left: 73px;
-    width: 500px;
-    height: auto;
-    /* margin-right: 50px; */
-}
-     
-.me{
-    color: white;
-}
-
-/* *********Portfolio*********** */
-
-.projects-set1{
-    /* float: left; */
-    /* width: 33.33%; */
-    padding: 20px;
-}
-
-.projects-set2{
-    /* float: left; */
-    /* width: 33.33%; */
-    padding: 20px;
-}
-
-.portfolio h1{
-    display: block;
-    width: 100%;
-}
-
-.portfolio{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-}
-
-.portfolio a img{
-    height: 250px;
-    width: 400px;
-}
-
-.contactMe{
-    height: 100vh;
-    width: 100%;
-    background: url("images/bg.png");
+    background-image: url("images/paint-brush.jpg");
+    background-size: cover;
+    background-position: 50% 40%;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    /* background-size: cover; */
-    
-}
-.contactMeDiv{
+    width: 100%;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.contactMeUl{
-    display: flex;
-    width: 50%;
-    padding: 100px;
-    justify-content: center;
-    background: url("images/page.png");
-    background-size: 100% 100%;
-
-    box-shadow: 5px 10px 8px black;
-    border-radius: 10px;
-    align-items: center;
+.title h1{
+    font-family: 'Sacramento', cursive;
+    width: 500px;
+    text-align: center;
+    font-size: 10rem;
+    font-weight: lighter;
 }
 
-.contactMeUl li{
-    list-style: none;
-    padding: 50px;
-    
+.title h2{
+    letter-spacing: 2px;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.contactMeUl li a{
-    text-decoration: none;
+.title hr{
+    width: 10%;
+    border: none;
+    border-bottom: 6px dotted #94d0cc;
+    margin: 10px 0px;
+    margin-top: 30px;
 }
 
-.contactMeUl li a i{
-    font-size: 3rem;
-    color: #013859;
-}
+@media(max-width : 760px) {
+    .title{
+        /* background-color: orange; */
+        background-image: url("images/paint-brush.jpg");
+        background-size: cover;
+        width: 100%;
+       
 
-footer{
-    height: 200px;
-    margin-top: 70px;
-    background-color: #03989e;
-    /* background-size: 100% 100%; */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@media screen and (max-width: 992px) {
-    .aboutMe {
-      background-image: none;
     }
-  }
+    .title h1{
+        font-size: 7rem;
+        width: 500px;
+    }
+    .title h2{
+        letter-spacing: 2px;
+        font-size: 1.5rem;
+    }
+    
+    
+}
+
+
+@media(max-width : 500px) {
+    .title{
+        /* background-color: orange; */
+        background-image: url("images/paint-brush.jpg");
+        background-size: cover;
+        width: 100%;
+       
+
+    }
+    .title h1{
+        font-size: 4rem;
+        width: 300px;
+    }
+    .title h2{
+        letter-spacing: 2px;
+        font-size: 1rem;
+    }
+    
+    
+}
