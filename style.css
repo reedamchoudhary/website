@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* transition: all 0.4s; */
 }
 
 h1{
@@ -14,48 +15,87 @@ body{
     position: absolute;
     top: 10px;
     right: 20px;
+    cursor: pointer;
 }
 .lines{
     width: 50px;
-    height: 2px;
+    height: 3px;
     background-color: #94d0cc;
     margin: 5px;
+    border-radius: 3px;
 
 }
 
-.navigation-bar{
+.fas{
     position: absolute;
-    background-color: #94d0cc;
-    width: 100%;
-    height: 100vh;
+    top: 10px;
+    right: 20px;
+    font-size: 3rem;
+    color: blue;
+    cursor: pointer;
+}
+
+.navigation-bar{
+    position: fixed;
+    background-color:  #94d0cc;
+    /* width: 30%;
+    height: 0; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
+    /* display: none; */
+    right:0;
+    visibility: hidden;
+    transition: height 1s, width 1s, padding 1s, visibility 1s, opacity 0.5s ease-out;    color: white;
+    
+    
+}
+
+.navigation-bar ul{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
 }
 .navigation-bar li{
     padding: 20px;
-    width: 100vw;
+    width: 100%;
     list-style: none;
     text-align: center;
     text-decoration: none;
+    color: white;
 }
 .navigation-bar li:hover{
     background-color: gray;
 }
 
+.visible{
+    display: block;
+    height: 100%;
+    /* -webkit-transition: all 2.5s ease-in-out;
+    -moz-transition: all 2.5s ease-in-out;
+    -ms-transition: all 2.5s ease-in-out;
+    -o-transition: all 2.5s ease-in-out;
+    transition: all 2.5s ease-in-out; */
+
+}
+
 .title{
-    background-image: url("images/paint-brush.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(images/paint-brush.jpg);    
     background-size: cover;
     background-position: 50% 40%;
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items:center;
+    
 }
 .title h1{
     font-family: 'Sacramento', cursive;
@@ -63,12 +103,15 @@ body{
     text-align: center;
     font-size: 10rem;
     font-weight: lighter;
+    line-height: 150px;
 }
 
 .title h2{
+    width: 277px;
     letter-spacing: 2px;
     font-size: 2rem;
     font-family: 'Montserrat', sans-serif;
+    /* padding-bottom: 100px; */
 }
 
 .title hr{
@@ -76,15 +119,71 @@ body{
     border: none;
     border-bottom: 6px dotted #94d0cc;
     margin: 10px 0px;
-    margin-top: 30px;
+    margin-top: 120px;
+    /* padding-top: 20px; */
 }
 
-@media(max-width : 760px) {
+
+/* **********************ABOUT ME*************** */
+
+.about-me{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    width: 100%;
+    height: 100%;
+    background-image: url("images/Untitled\ design\ \(1\).jpg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right 50%;
+}
+
+.about-me-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.heading {
+    font-size: 4rem;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.about-me-content {
+
+}
+
+.about-me-content p{
+    width: 50%;
+    padding: 20px;
+    text-align: justify;
+    margin-right: 20px;
+    font-size: 25px;
+    letter-spacing: .5px;
+}
+
+.about-me-content img{
+    width: 50%;
+    height: auto;
+    padding: 100px;
+    /* background-image: url("images/Untitled\ design\ \(1\).jpg");
+    background-size: cover; */
+}
+
+
+@media(max-width : 887px) {
     .title{
         /* background-color: orange; */
-        background-image: url("images/paint-brush.jpg");
+        background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(images/paint-brush.jpg);
         background-size: cover;
         width: 100%;
+        
        
 
     }
@@ -95,20 +194,35 @@ body{
     .title h2{
         letter-spacing: 2px;
         font-size: 1.5rem;
+        text-align: center;
+    }
+    .navigation-bar{
+        width: 100%;
+    }
+
+    .about-me p{
+        font-size: 1rem;
+    }
+    .about-me-content img{
+        padding: 50px;
     }
     
     
 }
 
 
-@media(max-width : 500px) {
+@media(max-width : 634px) {
     .title{
         /* background-color: orange; */
-        background-image: url("images/paint-brush.jpg");
+        background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(images/paint-brush.jpg);
         background-size: cover;
         width: 100%;
        
 
+    }
+    .navigation-bar{
+        width: 100%;
+        
     }
     .title h1{
         font-size: 4rem;
@@ -118,6 +232,42 @@ body{
         letter-spacing: 2px;
         font-size: 1rem;
     }
+    .about-me p{
+        font-size: 1rem;
+        width: 100%;
+        align-items: center;
+        text-align: justify;
+        padding: 20px;
+        margin-left: 10px;
+        color: white;
+        font-weight: bold;
+    }
+    .about-me{
+        /* background-position: center 50% ; */
+        background-size: cover;
+        height: 100%;
+    }
+
+    .about-me .heading{
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: white;
+    }
+    .about-me-content img{
+        width: 80%;
+        padding: 5px;
+    }
+    .about-me-content{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
     
     
 }
+
+
+
