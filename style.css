@@ -351,11 +351,11 @@ footer{
     .portfolio{
         height: auto;
     }
-    .title h1{
+    .title .head h1{
         font-size: 12rem;
     }
     .title h2{
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .heading{
         font-size: 3rem;
