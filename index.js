@@ -4,8 +4,8 @@ window.onload= ()=>{
         3000
     )
     setTimeout(()=>{
-        document.querySelectorAll(".title .head h1")[0].style.fontSize = "10rem"
-        document.querySelectorAll(".title .head h1")[1].style.fontSize = "10rem"
+        document.querySelectorAll(".title .head h1")[0].style.transform = "scale(40)"
+        document.querySelectorAll(".title .head h1")[1].style.transform = "scale(40)"
     },
         1000
     )

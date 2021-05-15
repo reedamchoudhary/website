@@ -102,11 +102,11 @@ body{
     width: 700px;
     height: 150px;
     text-align: center;
-    font-size: 0rem;
+    font-size: 0.3rem;
     font-weight: lighter;
     line-height: 150px;
     /* display: none; */
-    transition: font-size 2s ease-in-out;
+    transition: transform 2s ease-in-out;
 }
 
 .title h2{
@@ -352,11 +352,14 @@ footer{
         height: auto;
     }
     .title .head h1{
-        font-size: 12rem;
+        /* margin-top: 10px; */
+        font-size: 0.3rem;
     }
     .title h2{
+        /* margin: 5px; */
         font-size: 3rem;
-        width: 400px;
+        text-align: center;
+        width: 450px;
     }
     .heading{
         font-size: 3rem;
