@@ -19,3 +19,10 @@ window.onload= ()=>{
         4000
     )
 }
+
+
+document.querySelector(".list").addEventListener("click",()=>{
+    console.log("inside event listemener")
+    document.querySelector("#checkbox.toggler").click()
+    // $("#checkbox").attr("checked", false);
+})

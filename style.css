@@ -11,78 +11,166 @@ h1{
 body{
     font-family: 'Open Sans', sans-serif;
 }
-.hamburger{
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-}
-.lines{
-    width: 50px;
-    height: 3px;
-    background-color: #94d0cc;
-    margin: 5px;
-    border-radius: 3px;
 
-}
+:root {
+    --primary-color: rgba(13, 110, 139, 0.75);
+    --overlay-color: rgba(24, 39, 51 , 0.85);
+    --menu-speed: 0.75s;
+  }
+  
 
-.fas{
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 3rem;
-    color: blue;
-    cursor: pointer;
-}
+/* *********************hamburger navigation***********************) */
 
-.navigation-bar{
+.menu-wrap {
     position: fixed;
-    background-color:  #94d0cc;
-    /* width: 30%;
-    height: 0; */
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+  
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: var(--primary-color);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    /* display: none; */
-    right:0;
-    visibility: hidden;
-    transition: height 1s, width 1s, padding 1s, visibility 1s, opacity 0.5s ease-out;    color: white;
-    
-    
-}
-
-.navigation-bar ul{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-
     justify-content: center;
-    align-items: center;
-}
-.navigation-bar li{
-    padding: 20px;
+  }
+  
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
     width: 100%;
-    list-style: none;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-}
-.navigation-bar li:hover{
-    background-color: gray;
-}
-
-.visible{
-    display: block;
+    height: 2px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+  
+  /* Moves Line Down */
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+  
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+  }
+  
+  /* Turns Lines Into X */
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  
+  /* Rotate On Hover When Checked */
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+  
+  /* Show Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition:  opacity 0.4s ease 0.4s;
+  }
+  
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    /* -webkit-transition: all 2.5s ease-in-out;
-    -moz-transition: all 2.5s ease-in-out;
-    -ms-transition: all 2.5s ease-in-out;
-    -o-transition: all 2.5s ease-in-out;
-    transition: all 2.5s ease-in-out; */
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-wrap .menu > div {
+    background: var(--overlay-color);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+  
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+  }
+  
+  
 
-}
 
+
+
+
+
+
+/* **************************************Header********************************* */
 .title{
     background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(images/paint-brush.jpg);    
     background-size: cover;
@@ -95,6 +183,7 @@ body{
     flex-direction: column;
     justify-content:center;
     align-items:center;
+    overflow:hidden;
     
 }
 .title .head h1{
@@ -133,7 +222,7 @@ body{
 }
 
 
-/* **********************ABOUT ME*************** */
+/* ******************************************ABOUT ME*************************************** */
 
 .about-me{
     /* display: flex;
@@ -186,7 +275,7 @@ body{
     background-size: cover; */
 }
 
-/* *********************************PORTFOLIO*************************** */
+/* *********************************PORTFOLIO**************************************** */
 .portfolio{
     width: 100%;
     height: 100vh;
@@ -223,7 +312,7 @@ body{
     transition: all .5s;
 }
 
-/* *************************************CONTACT ME******************* */
+/* *************************************CONTACT ME************************************* */
 
 .contact-me{
     width: 100%;
@@ -266,7 +355,7 @@ body{
 .far:hover{
     transform: translate(2, 3)
 }
-/* ****************************FOOTER************************ */
+/* ***********************************************FOOTER********************************************* */
 
 footer{
     height: 20vh;
@@ -281,7 +370,7 @@ footer{
 
 
 
-/* ***************************************MEDIA QUERY******************* */
+/* ***************************************MEDIA QUERY*************************************** */
 
 
 
@@ -305,10 +394,7 @@ footer{
     }
 
     .about-me{
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; */
+        
         width: 100%;
         height: 100%;
         background-image: url("images/use.jpg");
@@ -377,122 +463,3 @@ footer{
         height: 8px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-@media screen and (max-width : 1200px) {
-    .title{
-        /* background-color: orange; 
-        background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(images/paint-brush.jpg);
-        background-size: cover;
-        width: 100%;
-        
-       
-
-    }
-    .title h1{
-        font-size: 7rem;
-        width: 500px;
-    }
-    .title h2{
-        letter-spacing: 2px;
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    .navigation-bar{
-        width: 100%;
-    }
-
-    .about-me p{
-        font-size: 1rem;
-    }
-    .about-me-content img{
-        padding: 50px;
-    }
-    
-    
-}
-
-
-@media screen and (max-width : 800px) {
-    .title{
-        /* background-color: orange; 
-        background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(images/paint-brush.jpg);
-        background-size: cover;
-        width: 100%;
-       
-
-    }
-    .navigation-bar{
-        width: 100%;
-        
-    }
-    .title h1{
-        font-size: 4rem;
-        width: 300px;
-    }
-    .title h2{
-        letter-spacing: 2px;
-        font-size: 1rem;
-    }
-    .about-me p{
-        font-size: 1rem;
-        width: 100%;
-        align-items: center;
-        text-align: justify;
-        padding: 20px;
-        margin-left: 10px;
-        color: white;
-        font-weight: bold;
-    }
-    .about-me{
-        /* background-position: center 50% ; 
-        background-size: cover;
-        height: 100%;
-    }
-
-    .about-me .heading{
-        font-size: 3rem;
-        margin-bottom: 20px;
-        color: white;
-    }
-    .about-me-content img{
-        width: 80%;
-        padding: 5px;
-    }
-    .about-me-content{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    
-    
-    
-}
-
-
- */
