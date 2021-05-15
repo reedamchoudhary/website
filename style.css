@@ -113,7 +113,7 @@ body{
     width: 277px;
     letter-spacing: 2px;
     font-size: 2rem;
-    transform: translateY(400px);
+    transform: translateY(800px);
     font-family: 'Montserrat', sans-serif;
     /* visibility: hidden; */
     transition: transform 1s ease-in-out;
