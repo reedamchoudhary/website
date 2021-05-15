@@ -97,29 +97,38 @@ body{
     align-items:center;
     
 }
-.title h1{
+.title .head h1{
     font-family: 'Sacramento', cursive;
-    width: 500px;
+    width: 700px;
+    height: 150px;
     text-align: center;
-    font-size: 10rem;
+    font-size: 0rem;
     font-weight: lighter;
     line-height: 150px;
+    /* display: none; */
+    transition: font-size 2s ease-in-out;
 }
 
 .title h2{
     width: 277px;
     letter-spacing: 2px;
     font-size: 2rem;
+    transform: translateY(200px);
     font-family: 'Montserrat', sans-serif;
+    /* visibility: hidden; */
+    transition: transform 1s ease-in-out;
+    
     /* padding-bottom: 100px; */
 }
 
 .title hr{
-    width: 10%;
+    /* width: 10%; */
+    width: 0;
     border: none;
     border-bottom: 6px dotted #94d0cc;
     margin: 10px 0px;
     margin-top: 120px;
+    transition: width 1s ease-in-out;
     /* padding-top: 20px; */
 }
 
