@@ -382,7 +382,7 @@ footer{
     
 } */
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1600px){
     /* .tme{
         color: black;
     } */
@@ -460,7 +460,12 @@ footer{
     .details-card i{
         font-size: 80px;
     }
-    .hamburger div{
+    /* .hamburger div{
         height: 8px;
+    } */
+
+    .menu-wrap .hamburger{
+        width: 100px;
+        height: 100px;
     }
 }
