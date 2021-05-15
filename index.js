@@ -11,7 +11,11 @@ window.onload= ()=>{
     )
 
     setTimeout(()=>{
-        document.querySelector(".title h2").style.transform = "translateY(0px)"},
+        
+        document.querySelector(".title h2").style.visibility = "visible"
+        document.querySelector(".title h2").style.transform = "translateY(0px)"
+    
+    },
         4000
     )
 }

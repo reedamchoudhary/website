@@ -115,7 +115,7 @@ body{
     font-size: 2rem;
     transform: translateY(800px);
     font-family: 'Montserrat', sans-serif;
-    /* visibility: hidden; */
+    visibility: hidden;
     transition: transform 1.7s ease-in-out;
     
     /* padding-bottom: 100px; */
